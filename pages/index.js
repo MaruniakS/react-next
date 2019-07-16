@@ -1,5 +1,7 @@
-import Layout from '../components/Layout.js';
 import Link from 'next/link';
+import Head from 'next/head';
+
+import Layout from '../components/Layout.js';
 
 function getPosts() {
   return [
@@ -36,6 +38,10 @@ const PostLink = ({ post }) => (
 export default function Blog() {
   return (
       <Layout>
+        <Head>
+          <title>Main page</title>
+          <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        </Head>
         <h1>My blog</h1>
         <ul>
           {getPosts().map(post => (
