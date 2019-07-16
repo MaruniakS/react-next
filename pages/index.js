@@ -36,7 +36,7 @@ const PostLink = ({ post }) => (
 export default function Blog() {
   return (
       <Layout>
-        <h1>Posts</h1>
+        <h1>My blog</h1>
         <ul>
           {getPosts().map(post => (
               <PostLink key={post.id} post={post} />
